@@ -1,0 +1,14 @@
+#To setup the remote repo
+
+1 > ssh-keygen -t rsa -C "<your email address>" , accpet defaults and just press enter till you see the prompt back
+2 > windows -> eval $(ssh-agent) or if you are on mac `exec ssh-agent bash` 
+3 > Git hub profile setting -> SSH and GPG Keys -> New SSH key -> and then copy contents of <id_rsa>.pub  from where the key 
+	was saved in step 1
+4 > ssh-add
+5 > ssh -T git@github.com
+6 > git remote -v , you should have fetch and push both in https
+7 > git remote set-url origin <copy the git ssh url from your repo page>
+8 > git push -u origin main
+
+
+
